@@ -1,0 +1,170 @@
+/*  Desc: icon.css
+    Rime: 2016-01
+    Function: Site Icon
+*/
+.social-font {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    float: left;
+    padding-left: 3%;
+}
+
+.social-font>ul{
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    -o-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    text-align: center;
+    width: 94%;
+    height: 100%;
+    margin-top: 1%;
+}
+.social-font>ul>li{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    /* 均分父框高度，并将li设置为table显示 */
+    /*height: calc(100% / 5);*/
+    display: table;
+}
+.social-font>ul>li>a{
+    display: table-cell;
+    min-width: 18%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width: 568px) {
+    .social-font {
+        padding-left: 0%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .social-font {
+        width: 100%;
+    }
+}
+
+.social-font a {
+    float: left;
+    display: block;
+    width: 9%;
+    color: #009ad6;
+    font-size: 185%;
+}
+
+@media only screen and (min-width: 1024px) {
+    .social-font a {
+        padding: 0.3em;
+    }
+}
+
+.social-font a:hover:before {
+    text-decoration: none;
+    color: #840228;
+}
+
+.icon-weibo:before,
+.icon-github:before,
+.icon-twitter:before,
+.icon-facebook:before,
+.icon-stack-overflow:before,
+.icon-email:before,
+.icon-google_plus:before,
+.icon-linkedin:before {
+    font-family: "FontAwesome";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weibo:before {
+    content: "\f18a";
+}
+
+.icon-github:before {
+    content: "\f09b";
+}
+
+.icon-twitter:before {
+    content: "\f099";
+}
+
+.icon-facebook:before {
+    content: "\f09a";
+}
+
+.icon-stack-overflow:before {
+    content: "\f16c";
+}
+
+.icon-email:before {
+    content: "\f003";
+}
+
+.icon-google_plus:before {
+    content: "\f0d5";
+}
+
+.icon-linkedin:before {
+    content: "\f08c";
+}
+
+.icon-douban:before {
+    font-family: "fontdiao";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f111";
+}
+
+.icon-zhihu:before {
+    font-family: "fontdiao";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f142";
+}
+
+.icon-v2ex:before {
+    font-family: "fontdiao";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f131";
+}
+
+.icon-wechat:before {
+    font-family: "fontdiao";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f135";
+}
+
+.fi-social-blogger:before {
+    content: "\f1bb";
+    font-size: 1.4em;
+    line-height: 1.2;
+}
+
+@font-face {
+    font-family: fontawesome;
+    src: url('../font/fontawesome-webfont.woff'), url('../font/fontawesome-webfont.ttf'), url('../font/fontawesome-webfont.eot');
+    /* IE9 */
+}
+
+@font-face {
+    font-family: fontdiao;
+    src: url('../font/fontdiao.woff'), url('../font/fontdiao.ttf'), url('../font/fontdiao.eot');
+    /* IE9 */
+}

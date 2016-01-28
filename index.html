@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PersonalResumé</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="HandheldFriendly" content="true" />
+    <link rel="stylesheet" href="http://static.runoob.com/assets/foundation-5.5.3/foundation.min.css">
+    <link rel="stylesheet" href="http://static.runoob.com/assets/foundation-icons/foundation-icons.css">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/icon.css">
+</head>
+
+<body>
+    <div class="wrapper"></div>
+</body>
+<script type="text/template" id="mainTpl">
+    <div class="row">
+        <!-- 普通样式风格导航栏: 未用了隐藏之-->
+        <nav class="top-bar foundation-bar fVisible"  id="foundationBar" data-topbar>
+            <section class="top-bar-section">
+                <ul class="right">
+                    <li><a href="#baseInfo" ><%= mainTitle.baseInfo %></a></li>
+                    <li class="divider"></li>
+                    <li><a href="#workExperiecnce"><%= mainTitle.workExperiecnce %></a></li>
+                    <li class="divider"></li>
+                    <li><a href="#workSkill"><%= mainTitle.workSkill %></a></li>
+                    <li class="divider"></li>
+                    <li><a href="#eduBackground"><%= mainTitle.eduBackground %></a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://www.jeffjade.com" target="_blank"><%= mainTitle.personalSite %></a></li>
+                </ul>
+            </section>
+        </nav>
+        <!-- 麦哲伦-风格导航栏 -->
+        <div data-magellan-expedition="fixed" id="magellanBar">
+            <dl class="sub-nav">
+                <dd data-magellan-arrival="page_baseInfo"><a href="#page_baseInfo"><%= mainTitle.baseInfo %></a></dd>
+                <dd data-magellan-arrival="page_workExperiecnce"><a href="#page_workExperiecnce"><%= mainTitle.workExperiecnce %></a></dd>
+                <dd data-magellan-arrival="page_workSkill"><a href="#page_workSkill"><%= mainTitle.workSkill %></a></dd>
+                <dd data-magellan-arrival="page_eduBackground"><a href="#page_eduBackground"><%= mainTitle.eduBackground %></a></dd>
+                <dd data-magellan-arrival="page_selfEvaluation"><a href="#page_selfEvaluation"><%= mainTitle.selfEvaluation %></a></dd>
+                <dd data-magellan-arrival="page_selfFootprint"><a href="#page_selfFootprint"><%= mainTitle.selfFootprint %></a></dd>
+                <dd data-magellan-arrival="page_selfFootprint"><a href="http://www.jeffjade.com"><%= mainTitle.personalSite %></a></dd>
+            </dl>
+        </div>
+        <div class="medium-12 columns">
+            <div class="panel">
+                <h1><%= pageInfo.heading %></h1>
+                <p><%= pageInfo.subheading %></p>
+                <hr>
+                <div id="baseInfo">
+                    <a name="page_baseInfo"></a>
+                    <h3 data-magellan-destination="page_baseInfo" class="jadeAdjust"><%= mainTitle.baseInfo %></h3>
+                    <div>
+                        <ul class="pricing-table infoTable">
+                            <li class="bullet-item"><b><%= baseInfoTitle.name %></b>
+                                <%= baseInfo.name %>
+                            </li>
+                            <li class="bullet-item"><b><%= baseInfoTitle.age %></b>
+                                <%= baseInfo.age %>
+                            </li>
+                            <li class="bullet-item"><b><%= baseInfoTitle.phone %></b>
+                                <%= baseInfo.phone%>
+                            </li>
+                            <li class="bullet-item"><b><%= baseInfoTitle.sex %></b>
+                                <%= baseInfo.sex %>
+                            </li>
+                            <li class="bullet-item"><b><%= baseInfoTitle.birth %></b>
+                                <%= baseInfo.birth %>
+                            </li>
+                            <li class="bullet-item"><b><%= baseInfoTitle.email %></b>
+                                <a href="mailto:<%= baseInfo.email %>" target="_blank"><%= baseInfo.email %></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div id="workExperiecnce" name="workExperiecnce">
+                    <a name="page_workExperiecnce"></a>
+                    <h3 data-magellan-destination="page_workExperiecnce" class="jadeAdjust"><%= mainTitle.workExperiecnce %></h3>
+                    <ul class="example-orbit-content adjustIndent" data-orbit>
+                        <% _.each(workExperiecnce, function(list,i){ %>
+                            <li data-orbit-slide="headline-1">
+                                <div>
+                                    <h4 class="exprienceTime"><%= list.time %></h4>
+                                    <h4 class="exprienceSite"><%= list.site %></h4>
+                                    <p class="exprienceDesc"><%= list.exprienceDesc %></p>
+                                </div>
+                            </li>
+                        <%})%>
+                    </ul>
+                </div>
+                <hr>
+                <div id="workSkill">
+                    <a name="page_workSkill"></a>
+                    <h3 data-magellan-destination="page_workSkill" class="jadeAdjust"><%= mainTitle.workSkill %></h3>
+                    <% _.each(workSkill , function(list , i){ %>
+                        <div class="progress round success adjustIndent">
+                            <span class="meter skillSpan" style="width:6%">
+                                <%= list.skillName %>
+                            </span>
+                            <span><%= list.ability %></span>
+                        </div>
+                    <% }) %>
+                </div>
+                <hr class="clearfix">
+                <div id="eduBackground">
+                    <a name="page_eduBackground"></a>
+                    <h3 data-magellan-destination="page_eduBackground" class="jadeAdjust"><%= mainTitle.eduBackground %></h3>
+                    <% _.each(eduBackground, function( list , i ){ %>
+                        <div class="row adjustIndent">
+                            <div class="medium-3 columns">
+                                <h4><%= list.university %></h4>
+                                <p class="marginZeroP"><%= list.time %></p>
+                                <p class="marginZeroP"><%= list.direction %></p>
+                            </div>
+                            <div class="medium-9 columns">
+                                <!-- <h3>加点什么？</h3> -->
+                                <p><%= list.details %></p>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+                <hr>
+                <div id="selfEvaluation">
+                    <a name="page_selfEvaluation"></a>
+                    <h3 data-magellan-destination="page_selfEvaluation" class="jadeAdjust"><%= mainTitle.selfEvaluation %></h3>
+                    <% _.each(selfEvaluation, function(content, index){  %>
+                        <p class="adjustIndent">
+                            <%= content %>
+                        </p>
+                    <% }) %>
+                </div>
+                <hr>
+                <div id="selfFootprint">
+                    <a name="page_selfFootprint"></a>
+                    <h3 data-magellan-destination="page_selfFootprint" class="jadeAdjust"><%= mainTitle.selfFootprint %></h3>
+                    <div class="social-font">
+                        <ul>
+                            <li>
+                                <% _.each(selfFootprint, function(type,index){%>
+                                    <a href="<%= type.url %>" target="_blank" class="<%= type.icon %>" title="<%= type.name %>"></a>
+                                <% }) %>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script src="http://static.runoob.com/assets/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://static.runoob.com/assets/foundation-5.5.3/js/foundation.min.js"></script>
+<script src="http://static.runoob.com/assets/foundation-5.5.3/js/vendor/modernizr.js"></script>
+<script type="text/javascript" src="./lib/require.js" data-main="js/main"></script>
+</html>

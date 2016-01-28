@@ -1,0 +1,178 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    /*background-color: #d3d7d4;*/
+    background-color: white;
+}
+
+.panel {
+    background: #f8f8fd;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 10, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 10, 0, 0.1) inset;
+    -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 10, 0, 0.1) inset;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 10, 0, 0.1) inset;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 10, 0, 0.1) inset;
+}
+
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4 {
+    font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: normal;
+}
+
+.orbit-container .orbit-prev,
+.orbit-container .orbit-next {
+    background-color: rgba(111, 111, 111, .1);
+}
+
+.orbit-container .orbit-slide-number {
+    left: 10px;
+    background: transparent;
+    color: #B9B4B4;
+    font-size: 12px;
+    position: absolute;
+    top: -3px;
+    z-index: 10
+}
+
+body,
+.top-bar-section ul li>a {
+    font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    letter-spacing: 1px;
+}
+
+.pricing-table .bullet-item {
+    font-size: 1rem;
+    background-color: #f8f8fd; //#F2f2f2
+}
+
+.progress {
+    background-color: #d3d7d4;
+    text-align: right;
+    position: relative;
+}
+.progress>span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 1%;
+}
+
+/*---------------------------------------------------MagellanNav Start*/
+
+.sub-nav dd {
+    font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 1.2rem;
+    line-height: 2.5;
+}
+
+.sub-nav dd.active a {
+    background: #d3d7d4;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    padding: 8px 20px 8px 20px;
+    text-decoration: none;
+}
+
+.sub-nav dd.active a:hover {
+    background: #72777b;
+}
+
+[data-magellan-expedition],
+[data-magellan-expedition-clone] {
+    background: white;
+    box-shadow: 0 1px 3px whitesmoke;
+    min-width: 100%;
+    padding: 10px;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    box-shadow: 0 1px 4px #eeeeee;
+    /*-webkit-transition: transform 0.5s cubic-bezier(0.56, -0.29, 0.57, 1),opacity 0.1s;
+    -moz-transition: transform 0.5s cubic-bezier(0.56, -0.29, 0.57, 1),opacity 0.1s;
+    -o-transition: transform 0.5s cubic-bezier(0.56, -0.29, 0.57, 1),opacity 0.1s;
+    transition: transform 0.5s cubic-bezier(0.56, -0.29, 0.57, 1),opacity 0.1s;*/
+    -webkit-backface-visibility: hidden;
+}
+
+/*---------------------------------------------------MagellanNav End*/
+
+section>.right>li>a {
+    font-size: 1.3em;
+}
+
+.infoTable {
+    margin: auto;
+    width: 80%;
+    min-width: 250px;
+}
+
+.exprienceTime {
+    padding-top: 3%;
+    padding-left: 2%;
+}
+
+.exprienceSite {
+    padding-left: 2%;
+}
+
+.exprienceDesc {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.skillSpan {
+    text-indent: 1%;
+    text-align: left;
+    line-height: 1.2;
+    width: 0;
+    animation-duration: .8s;
+    -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    -o-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.skillSpan>span {
+    float: right;
+}
+
+.marginZeroP {
+    margin: 0%;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+#baseInfo,
+#workExperiecnce,
+#workSkill {
+    margin: 4% auto;
+}
+
+/*--------------------------------adjustClass*/
+#selfFootprint {
+    position: relative;
+    padding-bottom: 6%;
+}
+
+.jadeAdjust {
+    margin-bottom: 3% !important;
+}
+
+.adjustIndent {
+    margin-left: 2% !important;
+}
+#selfEvaluation .adjustIndent{
+    text-indent: 2em;
+}
+
+.fVisible{
+    display: none;
+}
