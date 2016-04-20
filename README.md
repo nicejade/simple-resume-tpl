@@ -1,6 +1,6 @@
-## uglyResumeTpl
+## easyResumeTpl
 
-Create an ugly resume template used to practice the **Foundation** framework .
+Create an easy resume template used to practice the **Foundation** framework .
 
 #### **备注**:
 
