@@ -1,6 +1,6 @@
-## easyResumeTpl
+<h2 align='center'>Simple Resume Template(V0.1)</h2>
 
-Create an easy resume template used to practice the **Foundation** framework .
+Create an simple resume template used to practice the **Foundation** framework .
 
 #### **备注**:
 
